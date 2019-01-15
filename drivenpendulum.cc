@@ -2,7 +2,6 @@
 #include <math.h>
 #define Nstep 100000
 
-static int spin = 0;
 double t=0.0;
 double theta=M_PI/2.0;
 double omega=1.5;
