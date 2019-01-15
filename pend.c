@@ -23,11 +23,13 @@ double omegadot(double t, double theta, double omega)
    double num, denom;
 
    num = -b*omega + A*cos(k*t);
-   denom = m*pow(R,2.0);
-   return -g/R*sin(theta)+num/denom;
-
+   denom = m*R*R;
    // To test limiting case of small theta, use following line of code
-   // return -g/R*theta;
+   return -g/R*theta;
+
+
+   //return (-g/R*sin(theta)+num)/denom;
+
 }
 
 
@@ -60,7 +62,7 @@ int main(int argc, char** argv)
 {
 
    double t=0.0;
-   double theta=M_PI/2.0;
+   double theta=M_PI/4.0;
    double omega=0.0;
 
    for (long i=0; i<2*Nstep; i++ ) {
